@@ -5,7 +5,7 @@ import sqlalchemy as alch
 dotenv.load_dotenv()
 
 password = os.getenv("sql_pass")
-dbName = "HP"
+dbName = "Friends"
 
 connectionData=f"mysql+pymysql://root:{password}@localhost/{dbName}"
 
