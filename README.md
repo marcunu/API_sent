@@ -1,8 +1,18 @@
+<img src="https://habrastorage.org/webt/t6/sr/jr/t6srjrmjjmm6qn8gpld9emy4txu.gif">
+
+
 # API Sentiment Project
 
 This project consists of the creation of a database using `Flask` to create it, add information and consult it by means of APIs.
 
-For this I have created a database in `SQL`.
+<img src="https://media1.tenor.com/images/60e825ea5be132c7b511adea590a9e10/tenor.gif?itemid=12296269">
+
+For this I have created a database in `SQL` with the information of the different seasons of `Friends`, this database includes:
+* Episodes
+* Directors 
+* Summary
+* Seasons
+* Rates & Votes
 
 # Index
 
@@ -45,9 +55,12 @@ Different APIs are created in order to allow the clients get or post information
     
 * POST: this method allows the client to post information.
     * [POST new director](http://localhost:5000/new_director/")
-    * [Get new episode](http://localhost:5000/new_episode/)
+    * [POST new episode](http://localhost:5000/new_episode/)
+    
 
+# Sentiment Analysis
 
+Using `NLP & Text Sentiment Analysis` I made an emotional analysis of the data, finding out which are the most and the least emotional episodes from the different seasons of `Friends`.
     
 
 
