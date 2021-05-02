@@ -1,11 +1,11 @@
-<img src="https://habrastorage.org/webt/t6/sr/jr/t6srjrmjjmm6qn8gpld9emy4txu.gif">
+<img src="https://habrastorage.org/webt/t6/sr/jr/t6srjrmjjmm6qn8gpld9emy4txu.gif" class="center">
 
 
 # API Sentiment Project
 
 This project consists of the creation of a database using `Flask` to create it, add information and consult it by means of APIs.
 
-<img src="https://media1.tenor.com/images/60e825ea5be132c7b511adea590a9e10/tenor.gif?itemid=12296269">
+<img src="https://media1.tenor.com/images/60e825ea5be132c7b511adea590a9e10/tenor.gif?itemid=12296269" class="center">
 
 For this I have created a database in `SQL` with the information of the different seasons of `Friends`, this database includes:
 * Episodes
