@@ -1,42 +1,53 @@
-# Pipelines Project
+# API Sentiment Project
 
-The project is based on obtaining information about the last races made by me, through APIs, the best times of runners worldwide, through webscraping, and downloading a dataset to compare all the information.
+This project consists of the creation of a database using `Flask` to create it, add information and consult it by means of APIs.
+
+For this I have created a database in `SQL`.
 
 # Index
 
 * Documents
 * Steps
-* Datasets
-* Python libraries
+* APIs
 * Programms
+* Python libraries
+
 
 
 # Documents
 
-* 01 - API executable: data collection via API from `Strava`.
-* 02 - Srap executable: data collection via Web Scraping.
-* 03 - Visualization: graphs of the information obtained..
+* 01 - Data collection executable.
+* 02 - SQL Jupyter: database creation from jupyter.
+* 03 - Sentiment Analysis: graphs of the information obtained.
 
 
 
 # Steps
 
-* `Step 1`: search for a website that allows us to collect information through APIs and obtain such information.
+* `Step 1`: Select the dataset from  [Kaggle](https://www.kaggle.com/rezaghari/friends-series-dataset?select=friends_episodes_v3.csv)
         
-* `Step 2`: collect information from the internet with the web scraping method.
+* `Step 2`: Clean-up the dataset and export it in `.csv` format..
 
-* `Step 3`: take the information obtained in the two previous steps, clean it and export it in `.csv` format.
+* `Step 3`: take the information obtained in the two previous steps and add it to `SQL DataBase`.
 
-* `Step 4`: link information and graphics in a way that is easily understood by another person.
+* `Step 4`: create the necessary `endpoints` to get or post information.
+
+* `Step 5`: make the sentiment analysis of the data.
 
 
-# DataFrames
+# APIs
 
-3 different datasets have been generated throughout the project:
+Different APIs are created in order to allow the clients get or post information, some of this APIs are:
 
-   * Strava Dataset: information obtained via API.
-   * Marathon Dataset: information obtained via Web Scraping.
-   * Hong Kong Marathon 2016: dataset downloaded from  [Kaggle](https://www.kaggle.com/melvincheung/hong-kong-marathon-2016)
+* Get: this method give information to the client.
+    * [Get episodes by name](http://localhost:5000/episodes_name/)
+    * [Get episodes by director](http://localhost:5000/episodes_by_director/)
+    
+* POST: this method allows the client to post information.
+    * [POST new director](http://localhost:5000/new_director/")
+    * [Get new episode](http://localhost:5000/new_episode/)
+
+
     
 
 
@@ -53,8 +64,10 @@ The project is based on obtaining information about the last races made by me, t
 * Seaborn
 * Json
 * Requests
-* BeautifulSoup
-* Geopy
 * Mathplotlib
 * Numpy
-* Personal function library (limpieza_texto & visualizacion)
+* SQL Alchemy
+* Getpass
+* Os
+* Dotenv
+* Personal function library (getdata, postdata,functions,...)
