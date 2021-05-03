@@ -65,7 +65,7 @@ data["Director ID"] = data.apply(lambda row: f"DI_{row['Director'][0]}{row['Dire
 #Creation of different dataframes for the SQL DataBase tables.
 
 #Seasons
-temporadas = data.loc[:,["Season ID","Episode Number"]].groupby("Season ID").count()
+temporadas = data.loc[:,["Season ID","Season","Year_of_prod","Episode Number"]].groupby("Season ID").max()
 temporadas.to_csv("data/temporadas.csv")
 
 #Episodes

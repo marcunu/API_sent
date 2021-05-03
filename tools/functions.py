@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import requests
 
 #NLTK
 import nltk
@@ -60,3 +61,7 @@ def sent_analysis(string):
     pol = polarity["compound"]
     return pol
 
+def api_datos(url):
+    url_data = "http://localhost:5000/" + url
+    response = requests.get(url = url_data).json()
+    return pd.read_json(response)
