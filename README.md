@@ -26,9 +26,12 @@ For this I have created a database in `SQL` with the information of the differen
 
 # Documents
 
-* 01 - Data collection executable.
-* 02 - SQL Jupyter: database creation from jupyter.
-* 03 - Sentiment Analysis: graphs of the information obtained.
+* 01 - **Kaggle.py**: Data collection executable and `Sentimen Analysis` of data.
+* 02 - **SQL Jupyter**: database creation from jupyter.
+* 03 - **Visualization**
+* 04 - Draft Notebooks:
+    * Kaggle.
+    * Sentiment Analysis.
 
 
 
@@ -36,13 +39,15 @@ For this I have created a database in `SQL` with the information of the differen
 
 * `Step 1`: Select the dataset from  [Kaggle](https://www.kaggle.com/rezaghari/friends-series-dataset?select=friends_episodes_v3.csv)
         
-* `Step 2`: Clean-up the dataset and export it in `.csv` format..
+* `Step 2`: make the sentiment analysis of the data.
 
-* `Step 3`: take the information obtained in the two previous steps and add it to `SQL DataBase`.
+* `Step 3`: Clean-up the dataset and export it in `.csv` format..
 
-* `Step 4`: create the necessary `endpoints` to get or post information.
+* `Step 4`: take the information obtained in the two previous steps and add it to `SQL DataBase`.
 
-* `Step 5`: make the sentiment analysis of the data.
+* `Step 5`: create the necessary `endpoints` to get or post information.
+
+
 
 
 # APIs
@@ -83,4 +88,7 @@ Using `NLP & Text Sentiment Analysis` I made an emotional analysis of the data, 
 * Getpass
 * Os
 * Dotenv
+* Nltk
+* textblob
+* spacy
 * Personal function library (getdata, postdata,functions,...)
