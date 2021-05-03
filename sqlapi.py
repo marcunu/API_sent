@@ -23,6 +23,20 @@ def index():
     )
     return md_template
 
+#Director info
+
+@app.route("/director_info/<name>")
+def inform_director(name):
+    info = get.info_director(name)
+    return jsonify(info)
+
+#Season info
+
+@app.route("/season_info/<num>")
+def inform_season(num):
+    info = get.info_season(num)
+    return jsonify(info)
+
 #Episodes by name
 
 @app.route("/episodes_name/<name>")

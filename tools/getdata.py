@@ -34,19 +34,40 @@ def info_capitulo_temporada(numero):
 
 def episodios_director(nombre):
     query = f"""
-    SELECT Name, Season, Episode_Number, Episode_title AS Title, Year, Stars, SIA
+    SELECT Name, s.Season, Episode_Number, Episode_title AS Title, Year, Stars, SIA
     FROM episodes AS e
     LEFT JOIN directors AS d
     ON e.Director_id = d.Director_id
     LEFT JOIN ranking AS r
     ON e.Episode_id = r.Episode_id
     LEFT JOIN seasons AS s
-    ON s.Season_id = s.Season_id
+    ON e.Season_id = s.Season_id
     WHERE name = "{nombre}"
     """
 
     data = pd.read_sql_query(query, engine)
     return data.to_json(orient="records")
+
+def info_director(nombre):
+    query = f"""
+    SELECT Name, Director_id, Episodes
+    FROM directors
+    WHERE Director_id = "{nombre}"
+    """
+
+    data = pd.read_sql_query(query, engine)
+    return data.to_json(orient="records")
+
+def info_season(num):
+    query = f"""
+    SELECT Season_id, Season, Year, Episodes
+    FROM seasons
+    WHERE Season = {num}
+    """
+
+    data = pd.read_sql_query(query, engine)
+    return data.to_json(orient="records")        
+
 
 def toda_informacion():
     query = f"""

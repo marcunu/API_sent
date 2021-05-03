@@ -52,22 +52,40 @@ For this I have created a database in `SQL` with the information of the differen
 
 # APIs
 
+Using the get method the client gets a set of data in `Json` format by making a call to the url specified for each case. This can be done with the requests library in this way:
+
+    `url_data = "http://localhost:5000/" + url
+    response = requests.get(url = url_data).json()
+    return pd.read_json(response)`
+
+To do this you must create a dictionary and upload the data to the database using the POST method. This can be done with the requests library in this way: 
+
+    `nuevo_dir = {'Director_id':'D_pep',
+        'Name':'Pepito Perez',
+        'Episodes':3}`
+
+    `url_dir = "http://localhost:5000/new_director"`
+
+    `requests.post(url_dir, data = nuevo_dir)`
+
 Different APIs are created in order to allow the clients get or post information, some of this APIs are:
 
-* Get: this method give information to the client.
+* **Get**: this method give information to the client. 
     * [Get episodes by name](http://localhost:5000/episodes_name/)
+    * [Get episodes by season](http://localhost:5000/episodes_temp/)
     * [Get episodes by director](http://localhost:5000/episodes_by_director/)
+    * [Get all info](http://localhost:5000/all_info)
     
-* POST: this method allows the client to post information.
+* **POST**: this method allows the client to post information. 
     * [POST new director](http://localhost:5000/new_director/")
+    * [POST new season](http://localhost:5000/new_season/")
     * [POST new episode](http://localhost:5000/new_episode/)
-    
+    * [POST new rank](http://localhost:5000/new_rank/)
 
 # Sentiment Analysis
 
 Using `NLP & Text Sentiment Analysis` I made an emotional analysis of the data, finding out which are the most and the least emotional episodes from the different seasons of `Friends`.
     
-
 
 # Programs
 
