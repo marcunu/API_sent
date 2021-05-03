@@ -37,16 +37,28 @@ def download_kaggle():
     return data
 
 def quitar_comillas(fila):
+    '''
+    This function replace " with '.
+    Args:
+        - filar: the string where we want to remove ".
+    '''
+
     return fila.replace('"',"'")
 
 # Sentiment analysis
 
 def token(row):
+    '''
+    This function returns every word in a string as an element of a list
+    '''
     tokenizer = RegexpTokenizer(r"\w+")
     tokens = tokenizer.tokenize(row)
     return tokens
 
 def stop_words (lista):
+    '''
+    This function remove the words that are useless for a sentiment analysis
+    '''
     
     stop_words = set(stopwords.words("english"))
     nueva = []
@@ -56,17 +68,28 @@ def stop_words (lista):
     return " ".join(nueva)
 
 def sent_analysis(string):
+    '''
+    This function make a sentiment analysis of a string
+    '''
+
     sia = SentimentIntensityAnalyzer()
     polarity = sia.polarity_scores(string)
     pol = polarity["compound"]
     return pol
 
 def api_datos(url):
+    '''
+    This function make an API and returns a DataFrame to desired in our DataBase.
+    '''
+
     url_data = "http://localhost:5000/" + url
     response = requests.get(url = url_data).json()
     return pd.read_json(response)
 
 def input_director():
+    '''
+    This function upload information to directors table in our DataBase.
+    '''
 
     dir_id = input("Introduce an id for the director: ")
 
@@ -90,6 +113,10 @@ def input_director():
 
 
 def input_season():
+    '''
+    This function upload information to season table in our DataBase.
+    '''
+
     temp_id = input("Introduce an id for new season: ")
 
     while len(temp_id)>6:

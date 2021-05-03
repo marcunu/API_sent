@@ -133,6 +133,6 @@ def inserta_ranking():
 
 
 
-
+#This is necessary to automatically update the endpoints
 
 app.run("0.0.0.0",5000, debug=True)
