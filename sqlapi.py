@@ -124,9 +124,11 @@ def inserta_ranking():
 
     return "New ranking have been uploaded"
 
-
-
-
+#----------------------------------
+#TO DO
+#----------------------------------
+#Pedir capitulos cuyo SIA sea mayor que o menor que
+#Valorar SIA en positivo solo?
 
 
 
