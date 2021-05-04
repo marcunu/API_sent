@@ -22,7 +22,7 @@ def inserta_tempo(temp_id, temp, ano, capitulo):
     """)
 
 def inserta_epis(epi_id, sea_id, sea, dir_id, epi_num, epi_tit, dur, suma):
-        '''
+    '''
     This function insert data into episodes table
     '''
 
