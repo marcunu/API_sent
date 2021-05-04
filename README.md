@@ -48,7 +48,9 @@ For this I have created a database in `SQL` with the information of the differen
 * `Step 5`: create the necessary `endpoints` to get or post information.
 
 
+# SQL DataBase 
 
+<img src="images/sql.png" class="center">
 
 # APIs
 
