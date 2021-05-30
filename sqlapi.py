@@ -129,7 +129,7 @@ def inserta_ranking():
 #----------------------------------
 #Pedir capitulos cuyo SIA sea mayor que o menor que
 #Valorar SIA en positivo solo?
-
+#Buscar capitulo por palabra usando regex
 
 
 
